@@ -65,7 +65,7 @@
 							</header>
 
 							<footer>
-								<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
+								<a href="#portfolio" class="button scrolly">See more</a>
 							</footer>
 
 						</div>
@@ -79,53 +79,45 @@
 								<h2>Portfolio</h2>
 							</header>
 
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
+							<p>Below is a small sampling of the games I have worked on in various capacities. Clicking on each one will open a popup explaining my involvement in the project.</p>
 
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="#" class="image fit" onclick="gameInfo(1)"><img src="images/gamegame.jpg" alt="" /></a>
 										<header>
-											<h3>Ipsum Feugiat</h3>
+											<h3>Game/Game</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="#" class="image fit" onclick="gameInfo(2)"><img src="images/domm.png" alt="" /></a>
 										<header>
-											<h3>Rhoncus Semper</h3>
+											<h3>Dungeon of My Making</h3>
 										</header>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+										<a href="#" class="image fit" onclick="gameInfo(0)"><img src="images/bobblob.png" alt="" /></a>
 										<header>
-											<h3>Magna Nullam</h3>
+											<h3>BobBlob</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+										<a href="#" class="image fit"onclick="gameInfo(3)"><img src="images/dangwave.png" alt="" /></a>
 										<header>
-											<h3>Natoque Vitae</h3>
+											<h3>The Dangerous Waves</h3>
 										</header>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+										<a href="#" class="image fit"onclick="gameInfo(4)"><img src="images/aliens.png" alt="" /></a>
 										<header>
-											<h3>Dolor Penatibus</h3>
+											<h3>Eat the Aliens!</h3>
 										</header>
 									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
+									
 								</div>
 							</div>
 
@@ -142,12 +134,7 @@
 
 							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+							<p>I am a game developer/designer from Central Illinois. I have tenure at Illinois State University and I dream of being able to collaborate with other artists and game designers in the area to boost the creative voice of this area.</p>
 
 						</div>
 					</section>
@@ -160,10 +147,7 @@
 								<h2>Contact</h2>
 							</header>
 
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+							<p>If you would like to get in touch with me for any reason, the form below is the most convenient way to do so. Be as descriptive with your inquiry as possible please. I look forward to hearing from you.</p>
 
 							<form method="post" action="https://formspree.io/f/mreeavvv">
 								<div class="row">
@@ -201,6 +185,31 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script id="popups">
+				function gameInfo(state) {
+					switch(state) {
+						case 0: //bobblob
+							alert("This is the capstone game I am a part of. It's a puzzle platformer where you are a slime creature trying to escape an alien ship. I did a lot of the coding for the mechanics and I also resolved the many issues relating to GitHub that cropped up, especially late in development.");
+							break;
+						case 1: //game/game
+							alert("This is a card game I did for my Game Design 1 class. It's a game about making a game within certain limitations and with as many features as possible within said limitations. I created many of the graphics for the cards.")
+							break;
+						case 2: //domm
+							alert("This is a game I helped with during one of ISU's many game jams. You play as someone stuck in a dungeon maniested from their depressive mind and must escape the lair, avoiding the creatures that come with it. I did some 2D art for the game.")
+							break;
+						case 3: //dangerous waves
+							alert("This is another game jam entry I had a hand in, this time for ISU's 2025 Winter Jam. It's a roguelike shoot-em-up similar to Vampire Survivors except you're in a boat. I did some programming for it. This was my first real experience with the Godot game engine.");
+							break;
+						case 4: //eat aliens
+							alert("This is a simple game I wrote in JavaScript using the p5.js library for a programming for creatives class. You fly around a space arena trying to eat all the aliens within the time limit. I was the sole developer of the game and I also did all of the art.");
+							break;
+						default: 
+							alert("Whoops! Looks like I messed up with scripting and didn't load a message.")
+							break;
+					}
+				}
+			</script>
 
 	</body>
 </html>
